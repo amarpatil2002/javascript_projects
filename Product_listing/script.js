@@ -15,7 +15,7 @@ let mainFun = async (filterArray=[]) => {
         if(!cateArray.includes(pro.category))
         {
             categoryDiv.innerHTML += ` <div>
-            <input type="checkbox" onclick="filterData()" value="${pro.category}">${pro.category}
+            <input type="checkbox" onclick="filterData()" value="${pro.category}"><span>${pro.category}</span>
            </div>`
            // console.log(pro.category);
            cateArray.push(pro.category)
@@ -31,7 +31,7 @@ let mainFun = async (filterArray=[]) => {
             productsDiv.innerHTML += `<div class="item">
             <img src=${pro.image} alt="Product" srcset="">
             <h5>${pro.category}</h5>
-            <h5>Price:${pro.price} | Rating:${pro.rating}</h5>
+            <h5>Price:${pro.price} | Rating:${pro.rating.rate}</h5>
             <h4>${pro.title}</h4>
         </div>`
         }
